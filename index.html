@@ -5,75 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT's KOSTA</title>
-  <link rel="stylesheet" type="text/css" href="css/common.css">
-  <link rel="stylesheet" type="text/css" href="css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="css/navbar.css" type="text/css" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+  <link rel="stylesheet" href="css/footer.css" type="text/css" />
+  <style>
     #main{
       display: grid;
-      grid-template-columns: repeat(3,1fr);
-      grid-template-rows:auto;
-      grid-gap:10px;
+      grid-template-columns: repeat(3,1fr) ;
+      grid-template-rows:auto ;
+      gap: 10px;
       margin-top: 5px;
     }
-    
     #main .main-item img{
       width: 100%;
-      object-fit:conver;
     }
-    
+
     #main .main-item button{
       padding: 5px;
       font-size: 15px;
       width: 80px;
       float: right;
-      
     }
-    
+
   </style>
-  <script type="text/javascript">
-  
-     let bannerList = ["국민의 은행이 되겠습니다.",
-    	 "5060 웰컴패키지, 최대 7만원혜택을 드립니다.", 
-    	 "타행이체, 자동이체 수수료 면제",
-    	 "저녁 6시까지 영업합니다."]; 
-     
-     onload = function(){
-    	 //banner에 text를 변경해라.
-    	 let divEle = document.getElementById("banner");
-    	 let index=0;
-    	 
-    	 setInterval(function(){
-    		 divEle.innerText = bannerList[index++];
-    		 
-    		 if(index==bannerList.length)index=0;
-    		 
-    		 //console.log(index)
-    	 }, 1000);
-    	 
-    	 
-    	 //////////////////////////////////////////
-    	 //버튼 클릭했을대
-    	 document.querySelectorAll(".main-item-btn").forEach(function(item, index){
-    		 //console.log(index+" = " + item);
-    		 //버튼에 이벤트 등록
-    		 item.onclick = function(){
-    		      //속성의 값을 조회
-    		     // alert(item.closest(".main-item"));//클릭된 버튼과 가장가까운 class=".main-item" 인 노드찾기 = div
-    		      let divEle =  item.closest(".main-item");
-    		      let id = divEle.getAttribute("data-main-item-id");
-    		      
-    		      alert("id = " + id);
-    		 };
-    		 
-    	 });
-    	 
-    	 
-    	 
-    	 
-     }//onload끝
-  
-  </script>
 </head>
 <body>
   <div id="container">
@@ -95,29 +49,29 @@
     <div id="main">
     
      <!-- 총 3개의 서브영역 -->
-      <div class="main-item" data-main-item-id="10">
+      <div class="main-item">
         <img src="https://picsum.photos/200" alt="">
          <h2>main-item 1</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="main-item-btn">button 1</button>
+        <button>button 1</button>
       </div>
       
-      <div class="main-item" data-main-item-id="20">
+      <div class="main-item">
         <img src="https://picsum.photos/200" alt="">
          <h2>main-item 2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="main-item-btn">button 2</button>
+        <button>button 2</button>
       </div>
       
       
       
-      <div class="main-item" data-main-item-id="30">
+      <div class="main-item">
         <img src="https://picsum.photos/200" alt="">
         <h2>main-item 3</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="main-item-btn">button 3</button>
+        <button>button 3</button>
       </div>
-      
+     
       
    </div>
     
